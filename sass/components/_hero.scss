@@ -1,0 +1,154 @@
+.hero {
+  background-color: $heroBcg;
+  padding-top: 67px;
+  &-circle {
+    width: 663px;
+    height: 663px;
+    position: absolute;
+    top: 181px;
+    left: 47%;
+    background-color: $figureStyling;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  &-dotted-circle {
+    width: 733px;
+    height: 733px;
+    position: absolute;
+    top: 146px;
+    left: 45%;
+    border: 2px dashed $figureStyling;
+    border-radius: 50%;
+    z-index: 3;
+  }
+  &-girl {
+    position: relative;
+    z-index: 2;
+  }
+  &-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.4;
+    color: $hightlightFontColor;
+    margin-bottom: 24px;
+  }
+  &-description {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.72;
+    margin-bottom: 48px;
+    width: 617px;
+  }
+  &-button {
+    @extend %button;
+  }
+}
+
+.hero-shape {
+  fill: $figureStyling;
+  position: absolute;
+  top: -58px;
+}
+
+.hero-achivements {
+  @extend %list;
+  justify-content: space-between;
+  margin-top: 92px;
+  &-number {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    color: $hightlightFontColor;
+    margin-bottom: 12px;
+  }
+  &-descr {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    color: $additionFontColor;
+    margin-bottom: 0;
+  }
+}
+
+.hero-image {
+  position: relative;
+}
+
+.team {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: $mainBcg;
+  border-top-right-radius: 28px;
+  padding: 36px 44px;
+  z-index: 3;
+  &-title {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1;
+    color: $headerHoverFontColor;
+    margin-bottom: 48px;
+  }
+  &-list {
+    @extend %list;
+  }
+}
+
+.team-member {
+  width: 79px;
+  height: 79px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: $buttonColor;
+  border-radius: 50%;
+  margin-right: -16px;
+  &:first-child {
+    background: $firstIcon url('../images/teammem2.png');
+    background-repeat: no-repeat;
+    background-position: 40% 100%;
+  }
+  &:nth-child(2) {
+    background-color: $secondIcon;
+    background-repeat: no-repeat;
+    background-image: url('../images/teammem1.png');
+    background-position: 40% 100%;
+  }
+  &:nth-child(3) {
+    background-color: $thirdIcon;
+    background-image: url('../images/teammem3.png');
+    background-repeat: no-repeat;
+    background-position: 40% 100%;
+  }
+  &:last-child {
+    background-color: $lastIcon;
+    margin-right: 0;
+  }
+}
+
+.team-icon {
+    background-color: $userIcon;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    fill: $mainBcg;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+} 

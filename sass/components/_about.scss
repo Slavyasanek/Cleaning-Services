@@ -1,0 +1,94 @@
+.about {
+  @include SectionPadding(120px);
+  &-flex {
+    display: flex;
+    position: relative;
+  }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      width: 513px;
+      margin-right: 181px;
+    }
+  &-label {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    color: $hightlightFontColor;
+    margin-bottom: 4px;
+    &-icon {
+      fill: $underlineIcon;
+      margin-bottom: 12px;
+    }
+  }
+  &-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.2;
+    color: $hightlightFontColor;
+    margin-bottom: 24px;
+  }
+  &-descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: $additionFontColor;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &_orange {
+      text-decoration: underline;
+      font-weight: 600;
+      color: $underlineIcon;
+    }
+  }
+  &-button {
+    @extend %button;
+    margin-top: 48px;
+  }
+  &-shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    fill: $figureStyling;
+  }
+}
+
+.about-image {
+    position: relative;
+    width: 622px;
+    height: 552px;
+}
+
+.about-girl-cleaning {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.about-circle {
+  width: 73px;
+  height: 73px;
+  background-color: $figureStyling;
+  border-radius: 50%;
+  top: 20px;
+  position: absolute;
+  left: 120px;
+}
+
+.about-thumb {
+  width: 373px;
+  height: 440px;
+  background-color: $figureStyling;
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  & > img {
+    position: absolute;
+    bottom: 0;
+    right: 39px;
+  }
+}

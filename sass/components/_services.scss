@@ -1,0 +1,129 @@
+.services {
+  @include SectionPadding(120px);
+  position: relative;
+  background-color: $secondBcg;
+  &-circle {
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    top: 0;
+    left: -82px;
+    background-color: $figureStyling;
+    border-radius: 50%;
+  }
+  &-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-label {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    color: $hightlightFontColor;
+    margin-bottom: 4px;
+  }
+  &-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.2;
+    color: $hightlightFontColor;
+    margin-bottom: 20px;
+  }
+  &-descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    color: $additionFontColor;
+    margin-bottom: 78px;
+    text-align: center;
+    width: 609px;
+  }
+}
+
+.services-list {
+  @extend %list;
+  justify-content: space-between;
+  margin: -16px;
+}
+
+.services-item {
+  border-radius: 12px;
+  border: 1px solid $borderColor;
+  padding: 32px;
+  width: calc((100% - 6 * 16px) / 3);
+  margin: 16px;
+  transition: transform 250ms ease-in, box-shadow 30ms ease-in;
+  &-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1;
+    color: $serviceItemFontColor;
+  }
+  &-descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 54px 80px -16px rgba(219, 222, 229, 0.8);
+    & .services-arrow {
+      background-color: $heroBcg;
+    }
+  }
+}
+
+.services-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.services-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  &__yellow {
+    background: rgba(255, 202, 69, 0.2);
+    box-shadow: 0px 17.3392px 36.1233px rgba(0, 0, 0, 0.05);
+    fill: $thirdIcon;
+  }
+  &__green {
+    background: rgba(72, 183, 116, 0.2);
+    box-shadow: 0px 17.3392px 36.1233px rgba(0, 0, 0, 0.05);
+    fill: $firstIcon;
+  }
+  &__red {
+    background: rgba(255, 131, 69, 0.2);
+    box-shadow: 0px 17.3392px 36.1233px rgba(0, 0, 0, 0.05);
+    fill: $secondIcon;
+  }
+}
+
+.icon-arrow {
+  &__yellow {
+    fill: $thirdIcon;
+  }
+  &__green {
+    fill: $firstIcon;
+  }
+  &__red {
+    fill: $secondIcon;
+  }
+}
+
+.services-button {
+  @extend %button;
+  margin-top: 60px;
+}

@@ -1,0 +1,23 @@
+%list {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+%button {
+  background-color: $buttonColor;
+  border-radius: 4px;
+  width: 177px;
+  height: 66px;
+  border-color: transparent;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.66;
+  color: $mainBcg;
+  transition: background-color 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &:hover {
+    background-color: #1e4f9e;
+  }
+}
+

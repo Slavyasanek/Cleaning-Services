@@ -1,0 +1,77 @@
+.header {
+  padding: 26px;
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  &-icon {
+    transition: fill 250ms ease-in;
+  }
+  &-icon:hover {
+    fill: $buttonColor;
+  }
+  &-menu {
+    @extend %list;
+    margin-left: 280px;
+  }
+  &-item {
+    color: $headerFontColor;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    transition: all 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);;
+    &:hover {
+      color: $headerHoverFontColor;
+      font-weight: 600;
+    }
+  }
+  &-item:not(:last-child) {
+    margin-right: 36px;
+  }
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid $buttonColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    fill: $buttonColor;
+    &:hover {
+      fill: $figureStyling;
+      border-color: $figureStyling;
+    }
+  }
+}
+
+.header-call {
+  &-p {
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.875;
+    color: $black;
+  }
+  &-tel {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    color: $black;
+    &:hover {
+        font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.work {
+  @include SectionPadding(120px);
+  position: relative;
+  &-shape {
+    position: absolute;
+    fill: $figureStyling;
+    right: 0;
+    top: -47px;
+  }
+  &-label {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    color: $hightlightFontColor;
+    margin-bottom: 4px;
+    &-icon {
+      display: block;
+      fill: $underlineIcon;
+    }
+  }
+  &-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.2;
+    color: $hightlightFontColor;
+    width: 555px;
+  }
+  &-descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    color: $additionFontColor;
+    width: 403px;
+  }
+}
+
+.work-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.work-list {
+  @extend %list;
+  display: flex;
+  flex-direction: row;
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 23px;
+  width: 282px;
+  &__red {
+    border-left: 1px solid $redBorder;
+  }
+  &__blue {
+    border-left: 1px solid $buttonColor;
+  }
+  &__yellow {
+    border-left: 1px solid $thirdIcon;
+  }
+  &__green {
+    border-left: 1px solid $greenIcon;
+  }
+  &:not(:last-child) {
+    margin-right: 56px;
+  }
+}
+
+.work-item-title {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  color: $serviceItemFontColor;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.work-item-descr {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.work-num {
+  border-radius: 14px;
+  width: 107px;
+  height: 107px;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__red {
+    background: rgba(254, 107, 1, 0.1);
+  }
+  &__blue {
+    background: rgba(31, 107, 255, 0.1);
+  }
+  &__yellow {
+    background-color: rgba(255, 202, 69, 0.1);
+  }
+  &__green {
+    background-color: rgba(55, 211, 72, 0.1);
+  }
+}
+
+.work-priority {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 0;
+  &__red {
+    color: $redBorder;
+  }
+  &__blue {
+    color: $buttonColor
+  }
+  &__yellow {
+    color: $thirdIcon;
+  }
+  &__green {
+    color: $greenIcon;
+  }
+}

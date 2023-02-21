@@ -1,0 +1,103 @@
+.contacts {
+  @include SectionPadding(120px);
+  background: linear-gradient(to bottom, $secondBcg 50%, $mainBcg 50%);
+  position: relative;
+  &-circle {
+    width: 328px;
+    height: 328px;
+    background-color: $figureStyling;
+    position: absolute;
+    border-radius: 50%;
+    left: -158px;
+    top: 0;
+  }
+  &-shape {
+    fill: $figureStyling;
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+  &-template {
+    box-shadow: 0px 56px 80px -16px rgba(219, 222, 229, 0.8);
+    background-color: $mainBcg;
+    @include SectionPadding(55px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 82px;
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+  }
+  &-label {
+    font-weight: 500;
+    font-size: 20px;
+    color: $hightlightFontColor;
+    margin-bottom: 4px;
+  }
+  &-underline {
+    fill: $underlineIcon;
+    width: 78px;
+    height: 5px;
+  }
+  &-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.2;
+    color: $hightlightFontColor;
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+  &-descr {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.56;
+    margin-bottom: 33px;
+    max-width: 368px;
+  }
+  &-tel {
+    color: $buttonColor;
+    font-weight: 600;
+    font-size: 24px;
+    transition: color 250ms ease-in;
+    &:hover,
+    &:focus &:active {
+      color: $underlineIcon;
+    }
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    width: 466px;
+  }
+  &-input {
+    outline: none;
+    border: transparent;
+    border-bottom: 1px solid $pagination;
+    font-weight: 400;
+    font-size: 16px;
+    color: $formColor;
+    padding: 20px;
+    margin-bottom: 20px;
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        color: $formColor;
+    }
+    &:focus-within {
+      border-bottom: 2px solid $figureStyling;
+    }
+  }
+  &-message {
+    resize: none;
+    height: 157px;
+    margin-bottom: 48px;
+  }
+  &-button {
+    @extend %button;
+    width: 100%;
+  }
+}

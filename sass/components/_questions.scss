@@ -1,0 +1,65 @@
+.question {
+  @include SectionPadding(120px);
+  background-color: $secondBcg;
+  &-label {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: $hightlightFontColor;
+    margin-bottom: 4px;
+  }
+  &-icon {
+    display: flex;
+    margin: 0 auto;
+    fill: $underlineIcon;
+    margin-bottom: 5px;
+  }
+  &-title {
+    font-family: "Outfit";
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.2;
+    color: $hightlightFontColor;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+.question-list {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 35px;
+  &_item {
+    padding: 40px 18px 40px 20px;
+    background-color: $mainBcg;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    width: calc((100% - 4 * 18px) / 2);
+    height: min-content;
+  }
+  &_icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    fill: transparent;
+    margin-right: 16px;
+  }
+  &_text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $hightlightFontColor;
+    margin-bottom: 0;
+  }
+  &_answer {
+    font-size: 18px;
+    line-height: 1.56;
+    color: $additionFontColor;
+    margin-bottom: 0;
+    margin-top: 24px;
+  }
+}
